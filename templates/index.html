@@ -1,0 +1,19 @@
+<html>
+
+<head>
+  <title>OKBlog</title>
+</head>
+
+<body>
+  <h1>OKBlog</h1>
+  <div>
+    {% for post in posts reversed %}
+    <h3>{{post.title}}</h3>
+    <p>{{post.created_at}}</p>
+    <p>{{post.body|truncatewords:20}}</p>
+    <a href="/post/{{post.id}}">more</a>
+    {% endfor %}
+  </div>
+</body>
+
+</html>
